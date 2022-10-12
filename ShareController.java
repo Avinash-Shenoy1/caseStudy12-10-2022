@@ -48,44 +48,7 @@ public class ShareController {
 		service.save(company);	
 		return new ModelAndView("redirect:/index");
 	}
-//	
-//	@GetMapping("/course")
-//	public ModelAndView showAllCourses() {
-//		List<Course> courseList=service.findAll();
-//		ModelAndView mv=new ModelAndView("courseReportPage");
-//		mv.addObject("courseList",courseList);
-//		return mv;
-//		
-//	}
-//	@GetMapping("/find-course")
-//	public ModelAndView shoFindCourse() {
-//		return new ModelAndView("findCourse");
-//	}
-//	@PostMapping("/find-course")
-//	public ModelAndView showCourse(@RequestParam("id") long id) {
-//		Course course=service.findById(id);
-//		if (course==null) {
-//			String message="Data not found for the given ID";
-//			ModelAndView mv=new ModelAndView("errorShow") ;
-//			mv.addObject ("errorMessage" ,message) ;
-//			return mv;
-//		}
-//		List<Course> courseList=new ArrayList<>();
-//		courseList.add(course);
-//		ModelAndView mv=new ModelAndView("courseReportPage");
-//		mv.addObject("courseList",courseList);
-//		return mv;
-//		
-//	}
-//	
-//	@GetMapping("/display-course/{id}")
-//	public ModelAndView showACourses(@PathVariable long id) {
-//		Course course=service.findById(id);	
-//		ModelAndView mv= new ModelAndView("courseReportPage");
-//		mv.addObject("course",course);
-//		return mv;
-//		
-//	}
+
 	
 	@GetMapping("/delete-company/{id}")
 	public ModelAndView deleteACompany(@PathVariable long id) {
